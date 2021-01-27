@@ -1,4 +1,4 @@
-## Terraform Xen Vm Data source
+## Terraform Xen Vm External Data source
 
 While working with the [Xen Orchestra terraform provider](), it's often helpful to be able to retrieve the IP addresses of an existing VM(s). This is not possible at the moment until [#112](https://github.com/terra-farm/terraform-provider-xenorchestra/issues/112) is implemented, however, Terraform has an `external` data source that allows using an external program to augment existing terraform attributes and data. This repo is a proof of concept on how to access guest tools IP address information from Xen VMs until [#112](https://github.com/terra-farm/terraform-provider-xenorchestra/issues/112) is implemented inside the provider.
 

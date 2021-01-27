@@ -12,8 +12,11 @@ The following attributes are exported:
 - `result` - A map of resource name to object that contains `ip_address`, `ipv4_address` and `ipv6_address`. An example can be seen below in the Testing the script section.
 
 ### Using this script
+
 1.Compile this program `go build -o main`
+
 2. Move the `main` binary into a directory that is accessible from your Terraform code
+
 3. Create a `external` data source using this program and providing the correct inputs
 
 ```
@@ -23,7 +26,7 @@ resource "xenorchestra_vm" "vm" {
 }
 
 data "external" "xen_vm_ips" {
-  program = ["${path.module}/path/to/main"]
+  program = ["${path.module}/path/to/compiled/main"]
   query = {
     # The query argument expects a VM resource name as a key and
     # the VM's UUID as the value
